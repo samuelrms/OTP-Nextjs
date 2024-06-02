@@ -1,18 +1,22 @@
 {
   "name": "otp-next",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A reusable OTP (One Time Password) input component built with Next.js, Tailwind CSS.",
-  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/samuelrms/OTP-Nextjs.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "@samuelrms:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "tsc && cp src/components/otp/*.css dist/",
     "start": "next start",
     "lint": "next lint"
   },
