@@ -126,7 +126,7 @@ export const OTP = ({
               ref={(ref) => {
                 inputRefs.current[index] = ref;
               }}
-              className={`${inputHeight} ${inputWidth} text-center border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none focus:border-transparent`}
+              className={`${inputHeight} ${inputWidth} text-center border border-gray-300 rounded-md focus:ring-2 focus:primary-500 focus:outline-none focus:border-transparent`}
             />
           </div>
         ))}
