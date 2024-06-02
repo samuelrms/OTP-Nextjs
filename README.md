@@ -81,7 +81,7 @@ export default OTPExample;
 
 ### Next.js
 
-Here's how you can use the OTP input component in your React project:
+Here's how you can use the OTP input component in your Next.js project:
 
 ```tsx
 "use client"; // NOTE - Client-side rendered component
