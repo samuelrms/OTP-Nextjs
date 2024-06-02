@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "description": "A reusable OTP (One Time Password) input component built with Next.js, Tailwind CSS.",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samuelrms/OTP-Nextjs.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
