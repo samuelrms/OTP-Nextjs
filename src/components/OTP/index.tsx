@@ -7,7 +7,6 @@ export const OTP = ({
   length = 6,
   onComplete,
   accept = "numbers",
-  inputProps,
   inputHeight = "h-12",
   inputWidth = "w-12",
   spacing = "gap-4",
