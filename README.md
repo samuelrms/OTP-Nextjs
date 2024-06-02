@@ -11,6 +11,8 @@ A reusable OTP (One Time Password) input component built with Next.js, Tailwind 
     - [yarn](#yarn)
     - [pnpm](#pnpm)
   - [Usage](#usage)
+    - [React](#react)
+    - [NextJs](#nextjs)
   - [Props](#props)
   - [Types](#types)
     - [AcceptType](#accepttype)
@@ -48,9 +50,42 @@ pnpm add next-otp
 
 ## Usage
 
-Here's how you can use the OTP input component in your Next.js project:
+### React
+
+Here's how you can use the OTP input component in your React project:
 
 ```tsx
+import React, { useState } from "react";
+import OTP from "otp-next";
+import "otp-next/styles.css";
+
+const OTPExample = () => {
+  const [otp, setOtp] = useState("");
+
+  const handleComplete = (otp) => {
+    console.log("OTP complete:", otp);
+    setOtp(otp);
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <h1 className="text-2xl font-bold">OTP Input Example</h1>
+      <OTP onComplete={handleComplete} />
+      <p className="mt-4">Entered OTP: {otp}</p>
+    </div>
+  );
+};
+
+export default OTPExample;
+```
+
+### Next.js
+
+Here's how you can use the OTP input component in your React project:
+
+```tsx
+"use client"; // NOTE - Client-side rendered component
+
 import React, { useState } from "react";
 import OTP from "otp-next";
 import "otp-next/styles.css";
