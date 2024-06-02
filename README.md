@@ -19,6 +19,9 @@ A reusable OTP (One Time Password) input component built with Next.js, Tailwind 
     - [HeightClass](#heightclass)
     - [WidthClass](#widthclass)
     - [SpacingClass](#spacingclass)
+  - [MIT](#mit)
+  - [Author](#author)
+    - [Samuel Ramos](#samuel-ramos)
 
 ## Installation
 
@@ -310,3 +313,18 @@ export default OTPExample;
 | `gap-1.5` | "0.375rem"             |
 | `gap-2.5` | "0.625rem"             |
 | `gap-3.5` | "0.875rem"             |
+
+## MIT
+
+[MIT LICENSE](https://github.com/samuelrms/OTP-Nextjs/blob/main/LICENSE)
+
+## Author
+
+### Samuel Ramos
+
+- [Github](https://github.com/samuelrms)
+- [Instagram](https://www.instagram.com/samuelramos.dev/)
+- [LinkedIn](https://www.linkedin.com/in/samuelaoramos/)
+- [Portfolio](https://samuelramos.dev)
+- [WhatsApp](https://api.whatsapp.com/send?1=pt_BR&phone=5534988676166)
+- [Email](mailto:samuelaoliveiraramos@gmail.com)
