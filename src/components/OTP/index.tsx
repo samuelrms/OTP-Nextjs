@@ -1,10 +1,7 @@
 "use client";
 
-import { Input } from "@nextui-org/input";
-import { NextUIProvider } from "@nextui-org/system";
 import { useEffect, useRef, useState } from "react";
 import { OTPInputProps } from "./OTP.types";
-import "./globals.css";
 
 export const OTP = ({
   length = 6,
@@ -109,31 +106,31 @@ export const OTP = ({
     }
   };
 
+  const onFocusOTP = () => inputRefs.current[0]?.focus();
+
   return (
-    <NextUIProvider>
+    <div
+      className="bg-transparent gap-2 flex flex-col"
+      id="label"
+      onClick={onFocusOTP}
+    >
+      <label className="text-white">label</label>
       <div className={`flex-row flex ${spacing}`}>
         {otp.map((data, index) => (
-          <div
-            key={index}
-            className={`${inputHeight?.toString()} ${inputWidth?.toString()}`}
-          >
-            <Input
+          <div key={index} className={`${inputHeight} ${inputWidth}`}>
+            <input
               value={data}
               onKeyDown={(e) => handleKeyDown(e, index)}
               onPaste={index === 0 ? handlePaste : undefined}
+              onClick={(e) => e.stopPropagation()}
               ref={(ref) => {
                 inputRefs.current[index] = ref;
               }}
-              className={inputHeight?.toString()}
-              classNames={{
-                inputWrapper: inputHeight?.toString(),
-                input: "text-center",
-              }}
-              {...inputProps}
+              className={`${inputHeight} ${inputWidth} text-center border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none focus:border-transparent`}
             />
           </div>
         ))}
       </div>
-    </NextUIProvider>
+    </div>
   );
 };
