@@ -10,6 +10,7 @@ export const OTP = ({
   inputHeight = "h-12",
   inputWidth = "w-12",
   spacing = "gap-4",
+  inputProps,
 }: OTPInputProps) => {
   const [otp, setOtp] = useState<string[]>(new Array(length).fill(""));
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
@@ -113,7 +114,7 @@ export const OTP = ({
       id="label"
       onClick={onFocusOTP}
     >
-      <label className="text-white">label</label>
+      <label>label</label>
       <div className={`flex-row flex ${spacing}`}>
         {otp.map((data, index) => (
           <div key={index} className={`${inputHeight} ${inputWidth}`}>
@@ -126,6 +127,7 @@ export const OTP = ({
                 inputRefs.current[index] = ref;
               }}
               className={`${inputHeight} ${inputWidth} text-center border border-gray-300 rounded-md focus:ring-2 focus:primary-500 focus:outline-none focus:border-transparent`}
+              {...inputProps}
             />
           </div>
         ))}
