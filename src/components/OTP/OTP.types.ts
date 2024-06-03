@@ -1,5 +1,4 @@
-import { InputProps } from "@nextui-org/input";
-
+import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 import { HeightClass } from "./HeightClass.enum";
 import { SpacingClass } from "./SpacingClass.enum";
 import { WidthClass } from "./WidthClass.enum";
@@ -31,7 +30,10 @@ export type OTPInputProps = {
   /**
    * Props for the input component
    */
-  inputProps?: InputProps;
+  inputProps?: DetailedHTMLProps<
+    InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  >;
 
   /**
    * Define the height of the input.
