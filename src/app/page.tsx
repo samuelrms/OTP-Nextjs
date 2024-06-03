@@ -3,7 +3,7 @@ import { OTP } from "$/components";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-black">
+    <main>
       <OTP
         length={6}
         onComplete={(c) => console.log(c)}
